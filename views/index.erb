@@ -1,7 +1,7 @@
 <html>
   <head>
     <h1>Guess the Secret Number</h1>
-    <h2>(Between 1 and 100)</h2>
+    <h2>(Between 1 and 100, Only 5 Guesses!)</h2>
   </head>
     <body>
     <form>
@@ -12,7 +12,11 @@
       <%= msg %>
       <br>
       <br>
+      Guesses left: <%= count %>
+      <br>
+      <br>
       <%= msg == "You got it right!" ? "The SECRET NUMBER is #{num}" : ""%>
     </p>
+    <a class="homeButton" href="/">Home</a>
     </body>
 </html>
