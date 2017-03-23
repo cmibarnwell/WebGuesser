@@ -46,13 +46,14 @@ def checkGuess(guess)
   elsif (Guess.get_num-5) <= guess && guess < Guess.get_num
     msg = "Too low!"
   elsif guess > (Guess.get_num + 5)
-    msg = "Way too high! #{Guess.get_num}"
+    msg = "Way too high!"
   elsif guess < (Guess.get_num - 5)
     msg = "Way too low!"
   else
     msg = "You got it right! A new number has been generated if you'd like to play again."
     Guess.newNum
     Guess.countReset
+    return msg
   end
 
   Guess.countSubtract
